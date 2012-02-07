@@ -172,7 +172,7 @@ void userdefined ()
 				for (; i< NCols*MRows; i++)
 				{
 					c = (int) fgetc(infptr);
-					c = (c + 30 > MaxRGB) ? MaxRGB : c + 30;
+					c = (c + 30 > 255) ? 255 : c + 30;
 					fprintf(outfptr, "%c",c);
 				}
 			break;
